@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="smart_executors" basedir="." default="export">
+	<description>Smart Executors Building</description>
+
+	<property file="./META-INF/MANIFEST.MF" />
+	<property name="jar.version" value="${Bundle-Version}" />
+	<property name="jar.name" value="${Bundle-Name}" />
+	
+	<target name="init">
+		<mkdir dir="target" />
+		<delete>
+			<fileset dir="${basedir}/target">
+				<include name="**/*" />
+			</fileset>
+		</delete>
+	</target>
+
+	<target name="compile" description="Compiler">
+		<javac srcdir="${basedir}/src" destdir="${basedir}/target" debug="true" debuglevel="lines,vars,source" includeantruntime="false" encoding="UTF-8" />
+	</target>
+
+	<target name="jar">
+		<zip destfile="${basedir}/${jar.name}_${jar.version}.jar">
+			<fileset dir="${basedir}" includes="META-INF/" />
+			<fileset dir="${basedir}/target" />
+		</zip>
+	</target>
+
+	<target name="finish">
+		<delete dir="${basedir}/target/" />
+	</target>
+
+	<target name="export" depends="init, compile, jar, finish" />
+
+</project>
