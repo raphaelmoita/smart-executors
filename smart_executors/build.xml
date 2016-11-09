@@ -20,7 +20,7 @@
 	</target>
 
 	<target name="jar">
-		<zip destfile="${basedir}/${jar.name}_${jar.version}.jar">
+		<zip destfile="${basedir}/${jar.name}-${jar.version}.jar">
 			<fileset dir="${basedir}" includes="META-INF/" />
 			<fileset dir="${basedir}/target" />
 		</zip>
