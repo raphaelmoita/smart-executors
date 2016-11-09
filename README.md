@@ -3,6 +3,8 @@ Smart Executors API
 
 Smart Executor API offers a simple way to create a dynamic thread pool, where you can choose, based in rules you define, when increase or decrease the number of parallel threads.
 
+- Java 1.8
+
 ###How to create a package (smart_executor-1.0.0.jar)
 - **Ant**: run "ant -buildfile build.xml export"
 - **Maven**: run "mvn package"
