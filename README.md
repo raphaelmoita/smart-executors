@@ -6,8 +6,8 @@ Smart Executor API offers a simple way to create a dynamic thread pool, where yo
 - Java 1.8
 
 ###How to create a package (smart_executor-1.0.0.jar)
-- **Ant**: run "ant -buildfile build.xml export"
-- **Maven**: run "mvn package"
+- **Ant**: ant -buildfile build.xml export
+- **Mvn**: mvn package
 
 ###How to use
 ```Java
