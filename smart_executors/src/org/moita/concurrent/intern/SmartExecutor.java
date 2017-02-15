@@ -7,6 +7,10 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.function.IntSupplier;
 
+/**
+ * @author Raphael Moita.
+ * @email raphael.moita@gmail.com
+ */
 public final class SmartExecutor extends ThreadPoolExecutor {
     
     private static final int DEFAULT_CHECK_INTERVAL = 5;
