@@ -1,12 +1,11 @@
-Smart Executors API
-====================
+# Smart Executors API
 
 Smart Executor API offers a simple way to create a dynamic thread pool, where you can choose, based in rules you define, when increase or decrease the number of parallel threads.
 
 ```Java
 // Create a dynamic pool based on rules defined by
 // getMaxThreads() method. The method is gonna be called
-// in intervals of 10 seconds to resize the pool size 
+// in intervals of 10 seconds to resize the pool 
 // in case getMaxThread() method returns a different value.
 ExecutorService pool = org.moita.concurrent.Executors.newDinamicThreadPool(() -> getMaxThreads(), 10);
 
