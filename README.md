@@ -12,14 +12,15 @@ ExecutorService pool = org.moita.concurrent.Executors.newDinamicThreadPool(() ->
 // Return 100 in case current time is before 12.pm
 // otherwise returns 10.
 int getMaxThreads() {
-   int maxThreads = 0;
-   Calendar MOON = Calendar.getInstance();
-   MOON.set(Calendar.HOUR_OF_DAY, 12);
-   if (Calendar.getInstance().before(MOON)) {
+
+   int maxThreads = 10;
+   Calendar moon = Calendar.getInstance();
+   moon.set(Calendar.HOUR_OF_DAY, 12);
+   
+   if (Calendar.getInstance().before(moon)) {
       maxThreads = 100;
-   } else {
-      maxThreads = 10;
-   }
+   } 
+   
    return maxThreads;
 }
 ```
